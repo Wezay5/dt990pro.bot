@@ -1,0 +1,27 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+  AWS_LAMBDA_JS_RUNTIME = "nodejs20.x"
+
+[[redirects]]
+  from = "/api/interactions"
+  to = "/.netlify/functions/interactions"
+  status = 200
+
+[[redirects]]
+  from = "/api/linked-roles"
+  to = "/.netlify/functions/linked-roles"
+  status = 200
+
+[[redirects]]
+  from = "/api/callback"
+  to = "/.netlify/functions/callback"
+  status = 200
+
+[[redirects]]
+  from = "/api/register"
+  to = "/.netlify/functions/register"
+  status = 200
